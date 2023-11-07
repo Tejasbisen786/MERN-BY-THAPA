@@ -6,3 +6,7 @@ Project Overview + MERN + Admin Panel
 - Form Validation In Login And Signup
 - Some plugin we'll used
 - user schema and Model
+- Admin Functionality Feature
+- Admin CRUD Opearation
+
+
