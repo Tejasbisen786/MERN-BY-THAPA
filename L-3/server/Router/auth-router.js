@@ -7,15 +7,16 @@ const router=express.Router()
 //     res.send(" Welcome To Router Home page")
 // })
 
-
 router.route("/").get((req,res)=>{
     res.send(" Welcome To Router Home page")
 })
 
 router.route("/register").get((req,res)=>{
-    res.send(" Welcome To Router Register page")
+    res.send("")
 
 })
 
-
+router.route("/Login").get((req,res)=>{
+res.send('Login Page This g Side')
+})
 module.exports = router;
