@@ -1,22 +1,15 @@
-const express=require("express")
+const express = require("express");
 
-const router=express.Router()
-
+const router = express.Router();
+const authcontrollers= require("../controllers/auth-controllers");
 
 // router.get('/',(req,res)=>{
 //     res.send(" Welcome To Router Home page")
 // })
 
-router.route("/").get((req,res)=>{
-    res.send(" Welcome To Router Home page")
-})
+router.route("/").get(authcontrollers.home);
 
-router.route("/register").get((req,res)=>{
-    res.send("")
+router.route("/register").get(authcontrollers.register);
 
-})
 
-router.route("/Login").get((req,res)=>{
-res.send('Login Page This g Side')
-})
 module.exports = router;
