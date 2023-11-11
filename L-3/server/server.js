@@ -4,6 +4,9 @@ const app=express()
 const PORT= process.env.PORT || 3000
 const router= require("./Router/auth-router")
 
+
+//middlewares
+app.use(express.json())
 // Mount the Route
 app.use("/api/auth", router)
 

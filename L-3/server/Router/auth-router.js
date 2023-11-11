@@ -9,7 +9,7 @@ const authcontrollers= require("../controllers/auth-controllers");
 
 router.route("/").get(authcontrollers.home);
 
-router.route("/register").get(authcontrollers.register);
+router.route("/register").post(authcontrollers.register);
 
 
 module.exports = router;
