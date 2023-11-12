@@ -3,7 +3,7 @@ const express =require('express')
 const app=express()
 const PORT= process.env.PORT || 3000
 const router= require("./Router/auth-router")
-
+const connectDb=require("./controllers/utils/db")
 
 //middlewares
 app.use(express.json())
@@ -20,6 +20,8 @@ app.use("/api/auth", router)
 //     res.status(200).send("Welcome TO LOGIN Page")
 // })
 
+
+connectDb().then(()=>{
+
 app.listen(PORT,()=>{
-   console.log(`Server is running on ${PORT}`);
-})
+   console.log(`Server is running on ${PORT}`);}))
